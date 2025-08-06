@@ -95,15 +95,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 items-start">
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-in">
             {/* Contact Cards */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <Card key={index} className="border-0 bg-card/50 backdrop-blur-sm card-hover">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
+                  <CardContent className="lg:p-6 md:p-6 p-2">
+                    <div className="flex items-start lg:space-x-4 md:space-x-4 space-x-2">
                       <div className="w-12 h-12 bg-acacia-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <info.icon className="w-6 h-6 text-acacia-green" />
                       </div>
@@ -118,7 +118,7 @@ const Contact = () => {
                             onClick={() => window.open(info.link, '_blank')}
                           >
                             {info.action}
-                            <ExternalLink className="w-4 h-4 ml-1" />
+                            <ExternalLink className="w-4 h-4" />
                           </Button>
                         ) : (
                           <span className="text-sm text-acacia-green font-medium">{info.action}</span>

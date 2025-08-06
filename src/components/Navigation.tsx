@@ -6,6 +6,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Detect scroll for background + text color switch
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -13,6 +14,14 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Disable scroll when mobile menu is open
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isOpen);
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -33,9 +42,13 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-card text-acacia-green" : "bg-transparent"
-      }`}>
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/95 backdrop-blur-sm shadow-card"
+            : "bg-transparent"
+        }`}
+      >
         <div className="container-custom">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
@@ -43,7 +56,11 @@ const Navigation = () => {
               <div className="w-10 h-10 bg-gradient-warm rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A</span>
               </div>
-              <div className="text-xl font-serif font-semibold text-white">
+              <div
+                className={`text-xl font-serif font-semibold transition-colors duration-300 ${
+                  isScrolled ? "text-foreground" : "text-white"
+                }`}
+              >
                 Acacia Restaurant
               </div>
             </div>
@@ -54,7 +71,11 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-white hover:text-acacia-green transition-colors duration-500 font-medium"
+                  className={`transition-colors duration-500 font-medium ${
+                    isScrolled
+                      ? "text-foreground hover:text-acacia-green"
+                      : "text-white hover:text-acacia-green"
+                  }`}
                 >
                   {item.name}
                 </button>
@@ -74,7 +95,7 @@ const Navigation = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="lg:hidden"
+              className={`lg:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -85,18 +106,20 @@ const Navigation = () => {
 
       {/* Mobile Sidebar Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Mobile Sidebar */}
-      <div className={`
+      <div
+        className={`
         fixed top-0 right-0 h-full w-80 bg-background shadow-xl z-50 lg:hidden
         transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-      `}>
+        ${isOpen ? "translate-x-0" : "translate-x-full"}
+      `}
+      >
         <div className="p-6">
           {/* Sidebar Header */}
           <div className="flex items-center justify-between mb-8">
@@ -108,11 +131,7 @@ const Navigation = () => {
                 Acacia Restaurant
               </div>
             </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(false)}
-            >
+            <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)}>
               <X className="w-6 h-6" />
             </Button>
           </div>
@@ -128,7 +147,7 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            
+
             <div className="pt-4 border-t border-border">
               <Button
                 variant="default"

@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-8">
           <div className="text-center">
-            <div className="text-white/80 text-sm space-y-2">
+            <div className="text-white/80 text-sm space-y-2 flex items-center justify-between lg:flex-row flex-col">
               <p className="flex items-center justify-center">
                 © {currentYear} Acacia Restaurant & Cafe. All rights reserved.
               </p>

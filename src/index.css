@@ -55,9 +55,17 @@
     --earth: 30 25% 75%;
 
     /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(var(--acacia-green)), hsl(var(--warm-brown)));
-    --gradient-cream: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--background)));
-    --gradient-hero: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    --gradient-warm: linear-gradient(
+      135deg,
+      hsl(var(--acacia-green)),
+      hsl(var(--warm-brown))
+    );
+    --gradient-cream: linear-gradient(
+      180deg,
+      hsl(var(--cream)),
+      hsl(var(--background))
+    );
+    --gradient-hero: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
 
     /* Shadows */
     --shadow-warm: 0 10px 30px -5px hsl(var(--acacia-green) / 0.2);
