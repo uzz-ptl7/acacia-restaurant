@@ -43,7 +43,7 @@ const Navigation = () => {
               <div className="w-10 h-10 bg-gradient-warm rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A</span>
               </div>
-              <div className="text-xl font-serif font-semibold text-acacia-green">
+              <div className="text-xl font-serif font-semibold text-white">
                 Acacia Restaurant
               </div>
             </div>
@@ -54,7 +54,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-acacia-green transition-colors duration-200 font-medium"
+                  className="text-white hover:text-acacia-green transition-colors duration-200 font-medium"
                 >
                   {item.name}
                 </button>
@@ -104,7 +104,7 @@ const Navigation = () => {
               <div className="w-8 h-8 bg-gradient-warm rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">A</span>
               </div>
-              <div className="text-lg font-serif font-semibold text-acacia-green">
+              <div className="text-lg font-serif font-semibold text-foreground">
                 Acacia Restaurant
               </div>
             </div>
