@@ -50,7 +50,7 @@ const About = () => {
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               At Acacia, we believe dining is about more than just food – it's about creating 
               connections, celebrating moments, and providing a welcoming space for everyone. 
-              Our fully accessible restaurant offers halal options, vegetarian delights, and 
+              Our fully accessible restaurant offers vegetarian delights and 
               the perfect cup of coffee to accompany any meal.
             </p>
 
@@ -97,8 +97,8 @@ const About = () => {
             <div className="absolute -top-6 -right-6 bg-acacia-green rounded-xl shadow-card p-6 text-white animate-float" style={{ animationDelay: '1s' }}>
               <div className="text-center">
                 <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm">Halal</div>
-                <div className="text-sm">Certified</div>
+                <div className="text-sm">Fresh</div>
+                <div className="text-sm">Quality</div>
               </div>
             </div>
           </div>

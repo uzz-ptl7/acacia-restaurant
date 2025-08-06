@@ -87,7 +87,7 @@ const Hero = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-2xl font-bold text-acacia-gold">100%</div>
-              <div className="text-sm text-white/80">Halal Food</div>
+              <div className="text-sm text-white/80">Fresh Quality</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-acacia-gold">♿</div>

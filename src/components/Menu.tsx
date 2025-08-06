@@ -12,7 +12,7 @@ const Menu = () => {
       icon: Coffee,
       time: "7:00 AM - 11:00 AM",
       items: [
-        { name: "Acacia Breakfast Special", price: "8,500 RWF", description: "Traditional eggs, plantains, beans, and fresh bread", badges: ["Halal"] },
+        { name: "Acacia Breakfast Special", price: "8,500 RWF", description: "Traditional eggs, plantains, beans, and fresh bread", badges: ["Popular"] },
         { name: "Avocado Toast Deluxe", price: "6,500 RWF", description: "Artisan bread, fresh avocado, tomatoes, feta cheese", badges: ["Vegetarian"] },
         { name: "Rwandan Coffee & Pastry", price: "4,500 RWF", description: "Premium local coffee with fresh croissant", badges: ["Coffee"] }
       ]
@@ -22,9 +22,9 @@ const Menu = () => {
       icon: Utensils,
       time: "11:00 AM - 10:00 PM",
       items: [
-        { name: "Grilled Tilapia Special", price: "12,500 RWF", description: "Fresh Lake Kivu tilapia with ugali and vegetables", badges: ["Halal", "Popular"] },
+        { name: "Grilled Tilapia Special", price: "12,500 RWF", description: "Fresh Lake Kivu tilapia with ugali and vegetables", badges: ["Popular"] },
         { name: "Vegetarian Curry Bowl", price: "9,500 RWF", description: "Mixed vegetables in coconut curry with jasmine rice", badges: ["Vegan", "Spicy"] },
-        { name: "Acacia Beef Platter", price: "15,000 RWF", description: "Tender beef with traditional sides and soup", badges: ["Halal", "Chef's Choice"] },
+        { name: "Acacia Beef Platter", price: "15,000 RWF", description: "Tender beef with traditional sides and soup", badges: ["Chef's Choice"] },
         { name: "Mediterranean Mezze", price: "11,000 RWF", description: "Hummus, falafel, pita, olives, and fresh salad", badges: ["Vegetarian"] }
       ]
     },
@@ -43,7 +43,6 @@ const Menu = () => {
 
   const getBadgeVariant = (badge: string) => {
     switch (badge) {
-      case "Halal": return "default";
       case "Vegetarian": case "Vegan": return "secondary";
       case "Popular": case "Chef's Choice": return "destructive";
       case "Spicy": return "outline";

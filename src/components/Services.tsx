@@ -40,7 +40,7 @@ const Services = () => {
   const offerings = [
     { icon: "☕", title: "Premium Coffee", description: "Locally sourced beans" },
     { icon: "🍸", title: "Cocktails & Spirits", description: "Creative drinks & classics" },
-    { icon: "🥗", title: "Halal Food", description: "100% certified halal" },
+    { icon: "🥗", title: "Fresh Food", description: "Quality ingredients daily" },
     { icon: "🌱", title: "Vegan & Vegetarian", description: "Plant-based options" },
     { icon: "🍽️", title: "All-You-Can-Eat", description: "Special buffet offerings" },
     { icon: "🥘", title: "Small Plates", description: "Perfect for sharing" },

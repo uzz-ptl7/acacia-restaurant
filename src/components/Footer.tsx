@@ -103,7 +103,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Our Services</h3>
               <ul className="space-y-3 text-white/80">
-                <li>✅ Halal Food</li>
+                <li>✅ Fresh Quality Food</li>
                 <li>♿ Wheelchair Accessible</li>
                 <li>🌱 Vegan & Vegetarian</li>
                 <li>🚚 Delivery & Takeaway</li>
@@ -122,11 +122,22 @@ const Footer = () => {
         <div className="py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
-            <div className="text-white/80 text-sm">
+            <div className="text-white/80 text-sm space-y-2">
               <p className="flex items-center">
                 © {currentYear} Acacia Restaurant & Cafe. Made with 
                 <Heart className="w-4 h-4 mx-1 text-red-400" fill="currentColor" />
                 in Kigali, Rwanda
+              </p>
+              <p>
+                Made with ❤️ in Rwanda by the{" "}
+                <a 
+                  href="https://www.sitecraftersz.co/" 
+                  className="underline hover:text-white transition-colors duration-500" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Sitecrafters Team
+                </a>
               </p>
             </div>
 
