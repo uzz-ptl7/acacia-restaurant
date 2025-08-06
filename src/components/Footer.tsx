@@ -120,10 +120,9 @@ const Footer = () => {
 
         {/* Bottom Footer */}
         <div className="py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
+          <div className="text-center">
             <div className="text-white/80 text-sm space-y-2">
-              <p className="flex items-center">
+              <p className="flex items-center justify-center">
                 © {currentYear} Acacia Restaurant & Cafe. Made with 
                 <Heart className="w-4 h-4 mx-1 text-red-400" fill="currentColor" />
                 in Kigali, Rwanda
@@ -140,36 +139,6 @@ const Footer = () => {
                 </a>
               </p>
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              <span className="text-white/80 text-sm">Follow us:</span>
-              <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    size="sm"
-                    className="w-8 h-8 p-0 text-white/80 hover:text-white hover:bg-white/10"
-                    onClick={() => window.open(social.href, '_blank')}
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </Button>
-                ))}
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <Button
-              variant="secondary"
-              size="sm"
-              className="bg-white/10 text-white border-white/20 hover:bg-white hover:text-acacia-green"
-              onClick={() => window.open("tel:+250782721772")}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Make Reservation
-            </Button>
           </div>
         </div>
       </div>
