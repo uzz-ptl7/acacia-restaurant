@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Acacia Restaurant Design System - Warm, earthy tones reflecting nature and hospitality */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main Background & Text */
+    --background: 45 15% 98%;
+    --foreground: 25 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card & Surface Colors */
+    --card: 45 20% 96%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover Colors */
+    --popover: 45 20% 96%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Acacia Green */
+    --primary: 140 35% 25%;
+    --primary-foreground: 45 25% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Earth Brown */
+    --secondary: 25 30% 85%;
+    --secondary-foreground: 25 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Colors */
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Golden Warmth */
+    --accent: 40 45% 75%;
+    --accent-foreground: 25 25% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive Colors */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 25% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 140 35% 25%;
 
-    --radius: 0.5rem;
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Custom Restaurant Colors */
+    --acacia-green: 140 35% 25%;
+    --acacia-green-light: 140 25% 35%;
+    --warm-brown: 25 40% 40%;
+    --cream: 45 30% 92%;
+    --gold: 40 60% 65%;
+    --earth: 30 25% 75%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--acacia-green)), hsl(var(--warm-brown)));
+    --gradient-cream: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -5px hsl(var(--acacia-green) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(var(--warm-brown) / 0.1);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +84,42 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warm, cozy restaurant ambiance */
+    --background: 25 25% 8%;
+    --foreground: 45 25% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 20% 12%;
+    --card-foreground: 45 25% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 20% 12%;
+    --popover-foreground: 45 25% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 140 30% 40%;
+    --primary-foreground: 45 25% 95%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 45 25% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 40 40% 50%;
+    --accent-foreground: 45 25% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 25% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 140 30% 40%;
+
+    /* Dark mode custom colors */
+    --acacia-green: 140 30% 40%;
+    --acacia-green-light: 140 25% 50%;
+    --warm-brown: 25 30% 30%;
+    --cream: 45 20% 15%;
+    --gold: 40 50% 55%;
+    --earth: 30 20% 25%;
   }
 }
 
@@ -100,6 +129,65 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--acacia-green));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--acacia-green-light));
+  }
+}
+
+@layer components {
+  /* Hero Text Gradient */
+  .hero-text {
+    background: hsl(var(--acacia-green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 px-4;
+  }
+
+  /* Container max width */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-[var(--shadow-card)] hover:-translate-y-1;
+  }
+
+  /* Button glow effect */
+  .btn-glow {
+    @apply transition-all duration-300;
+    box-shadow: 0 0 20px hsl(var(--acacia-green) / 0.3);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--acacia-green) / 0.5);
   }
 }
