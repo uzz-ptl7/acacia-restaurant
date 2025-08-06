@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="relative z-10 container-custom text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 lg:mt-[50px] mt-[100px] mb-5">
             <Star className="w-4 h-4 text-acacia-gold" fill="currentColor" />
             <span className="text-sm font-medium">Authentic African Cuisine</span>
           </div>
@@ -69,7 +69,7 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={scrollToMenu}
-              className="bg-acacia-green hover:bg-acacia-green-light text-white font-semibold px-8 py-4 text-lg btn-glow"
+              className="bg-acacia-green hover:bg-acacia-green-light text-white duration-500 font-semibold px-8 py-4 text-lg btn-glow"
             >
               Explore Menu
             </Button>
@@ -77,7 +77,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={scrollToContact}
-              className="border-white text-white hover:bg-white hover:text-acacia-green font-semibold px-8 py-4 text-lg"
+              className="font-semibold px-8 py-4 text-lg"
             >
               Make Reservation
             </Button>

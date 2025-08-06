@@ -126,7 +126,7 @@ const Gallery = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                className="bg-white text-acacia-green hover:bg-white/90 font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="px-4 py-2 rounded-lg bg-white hover:bg-acacia-green hover:text-white text-acacia-green duration-700 border-[2px] hover:border-white border-acacia-green"
                 onClick={() => {
                   const element = document.querySelector("#contact");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
@@ -135,7 +135,7 @@ const Gallery = () => {
                 Make a Reservation
               </button>
               <button 
-                className="border border-white text-white hover:bg-white hover:text-acacia-green font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="border duration-700 border-white text-white hover:bg-white hover:text-acacia-green font-semibold px-6 py-3 rounded-lg transition-colors"
                 onClick={() => window.open("https://maps.app.goo.gl/mpJKT8m7iafURKLu7", '_blank')}
               >
                 Visit Us

@@ -160,8 +160,7 @@ const Menu = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                variant="secondary"
-                className="bg-white text-acacia-green hover:bg-white/90"
+                variant="outline"
                 onClick={() => window.open("tel:+250782721772")}
               >
                 Call for Reservation
@@ -169,7 +168,6 @@ const Menu = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-acacia-green"
               >
                 Order Delivery
               </Button>

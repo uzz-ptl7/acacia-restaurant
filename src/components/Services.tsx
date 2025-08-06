@@ -195,7 +195,7 @@ const Services = () => {
                 <div>
                   <MapPin className="w-8 h-8 mx-auto mb-2" />
                   <h4 className="font-semibold mb-2">Parking</h4>
-                  <p className="text-sm text-white/90">Free street parking available nearby</p>
+                  <p className="text-sm text-white/90">Free street parking available</p>
                 </div>
               </div>
             </div>

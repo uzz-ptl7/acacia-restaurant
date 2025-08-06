@@ -34,7 +34,7 @@ const Navigation = () => {
   return (
     <>
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-card" : "bg-transparent"
+        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-card text-acacia-green" : "bg-transparent"
       }`}>
         <div className="container-custom">
           <div className="flex items-center justify-between py-4">
@@ -54,7 +54,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-white hover:text-acacia-green transition-colors duration-200 font-medium"
+                  className="text-white hover:text-acacia-green transition-colors duration-500 font-medium"
                 >
                   {item.name}
                 </button>
@@ -62,7 +62,7 @@ const Navigation = () => {
               <Button
                 variant="default"
                 size="sm"
-                className="bg-acacia-green hover:bg-acacia-green-light btn-glow"
+                className="bg-acacia-green hover:bg-acacia-green/80 hover:text-black duration-700 btn-glow"
                 onClick={() => window.open("tel:+250782721772")}
               >
                 <Phone className="w-4 h-4 mr-2" />

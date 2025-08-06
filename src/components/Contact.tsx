@@ -129,24 +129,6 @@ const Contact = () => {
                 </Card>
               ))}
             </div>
-
-            {/* Map Embed */}
-            <Card className="border-0 bg-card/50 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5285515!2d30.1263!3d-1.9441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca681af000001%3A0x1!2sRemera%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Acacia Restaurant Location"
-                  ></iframe>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -248,6 +230,27 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className="mt-16 container-custom animate-fade-in">
+        {/* Map Embed */}
+        <Card className="border-0 overflow-hidden">
+          <CardContent className="p-0">
+            <div className="w-full h-[350px] md:h-[250px] lg:h-[350px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5285515!2d30.1263!3d-1.9441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca681af000001%3A0x1!2sRemera%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Acacia Restaurant Location"
+              ></iframe>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
     </section>
   );
 };

@@ -86,7 +86,7 @@ const About = () => {
             </div>
             
             {/* Floating Stats */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card p-6 animate-float">
+            <div className="absolute bottom-6 left-6 bg-white rounded-xl shadow-card p-6 animate-float">
               <div className="text-center">
                 <div className="text-2xl font-bold text-acacia-green">5+</div>
                 <div className="text-sm text-muted-foreground">Years Serving</div>
@@ -94,7 +94,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="absolute -top-6 -right-6 bg-acacia-green rounded-xl shadow-card p-6 text-white animate-float" style={{ animationDelay: '1s' }}>
+            <div className="absolute top-6 right-6 bg-acacia-green rounded-xl shadow-card p-6 text-white animate-float" style={{ animationDelay: '1s' }}>
               <div className="text-center">
                 <div className="text-2xl font-bold">100%</div>
                 <div className="text-sm">Fresh</div>

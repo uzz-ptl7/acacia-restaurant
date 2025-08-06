@@ -123,9 +123,7 @@ const Footer = () => {
           <div className="text-center">
             <div className="text-white/80 text-sm space-y-2">
               <p className="flex items-center justify-center">
-                © {currentYear} Acacia Restaurant & Cafe. Made with 
-                <Heart className="w-4 h-4 mx-1 text-red-400" fill="currentColor" />
-                in Kigali, Rwanda
+                © {currentYear} Acacia Restaurant & Cafe. All rights reserved.
               </p>
               <p>
                 Made with ❤️ in Rwanda by the{" "}
